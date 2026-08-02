@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: wx-cli 源码拆解
+  pageTitleSuffix: " · wx-cli 源码拆解"
+  enableSPA: true
+  enablePopovers: true
+  analytics: null
+  locale: zh-CN
+  baseUrl: hanqing.github.io/weixin-cli-notes
+  ignorePatterns: [private, templates, .obsidian]
+  defaultDateType: modified
+  theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    typography:
+      header: Noto Sans SC
+      body: Noto Sans SC
+      code: JetBrains Mono
+    colors:
+      lightMode:
+        light: "#f7f8fa"
+        lightgray: "#e3e7ed"
+        gray: "#9aa5b1"
+        darkgray: "#364152"
+        dark: "#182230"
+        secondary: "#087f8c"
+        tertiary: "#d97706"
+        highlight: "rgba(8, 127, 140, 0.12)"
+        textHighlight: "#fde68a88"
+      darkMode:
+        light: "#121820"
+        lightgray: "#2b3542"
+        gray: "#657386"
+        darkgray: "#d7dee8"
+        dark: "#f3f6fa"
+        secondary: "#55c2c9"
+        tertiary: "#f5b454"
+        highlight: "rgba(85, 194, 201, 0.16)"
+        textHighlight: "#f5b45466"
+plugins:
+  - source: ./plugins/frontmatter
+    enabled: true
+    order: 5
+  - source: github:quartz-community/created-modified-date
+    enabled: true
+    options:
+      priority: [frontmatter, git, filesystem]
+    order: 10
+  - source: github:quartz-community/syntax-highlighting
+    enabled: true
+    options:
+      theme:
+        light: github-light
+        dark: github-dark
+    order: 20
+  - source: github:quartz-community/obsidian-flavored-markdown
+    enabled: true
+    options:
+      enableInHtmlEmbed: false
+      enableCheckbox: true
+    order: 30
+  - source: github:quartz-community/github-flavored-markdown
+    enabled: true
+    order: 40
+  - source: github:quartz-community/table-of-contents
+    enabled: true
+    order: 50
+  - source: github:quartz-community/crawl-links
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+    order: 60
+  - source: github:quartz-community/description
+    enabled: true
+    order: 70
+  - source: github:quartz-community/content-index
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
+  - source: ./plugins/content-page
+    enabled: true
+  - source: github:quartz-community/backlinks
+    enabled: true
+    layout:
+      position: right
+      priority: 30
+  - source: github:quartz-community/article-title
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+  - source: github:quartz-community/content-meta
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 20
+  - source: github:quartz-community/page-title
+    enabled: true
+    layout:
+      position: left
+      priority: 10
+  - source: github:quartz-community/darkmode
+    enabled: true
+    layout:
+      position: left
+      priority: 30
+      group: toolbar
+  - source: github:quartz-community/reader-mode
+    enabled: true
+    layout:
+      position: left
+      priority: 35
+      group: toolbar
+  - source: github:quartz-community/breadcrumbs
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 5
+  - source: github:quartz-community/footer
+    enabled: true
+    options:
+      links:
+        源码仓库: https://github.com/jackwener/wx-cli
+        本笔记仓库: https://github.com/Hanqing/weixin-cli-notes
+layout:
+  groups:
+    toolbar:
+      priority: 35
+      direction: row
+      gap: 0.5rem
+  byPageType:
+    "404":
+      positions:
+        beforeBody: []
+        left: []
+        right: []
+    folder:
+      exclude: [reader-mode]

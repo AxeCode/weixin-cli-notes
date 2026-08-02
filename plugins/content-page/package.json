@@ -1,0 +1,19 @@
+{
+  "name": "local-content-page",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "quartz": {
+    "name": "content-page",
+    "displayName": "Content Page",
+    "category": ["pageType"],
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 50,
+    "defaultOptions": {}
+  }
+}

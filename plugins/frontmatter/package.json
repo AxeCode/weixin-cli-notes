@@ -1,0 +1,19 @@
+{
+  "name": "local-frontmatter",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "quartz": {
+    "name": "frontmatter",
+    "displayName": "Frontmatter",
+    "category": "transformer",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 5,
+    "defaultOptions": {}
+  }
+}
