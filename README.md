@@ -4,7 +4,7 @@
 
 ## 阅读入口
 
-- 在线版：<https://hanqing.github.io/weixin-cli-notes/>
+- 在线版：<https://axecode.github.io/weixin-cli-notes/>
 - Markdown：[`content/`](./content/)
 - 原始项目：<https://github.com/jackwener/wx-cli>
 
